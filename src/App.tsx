@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Button from "./components/Button";
-import Input from "./components/Input";
 import { useInput } from "./hooks/useInput";
 import "./App.css";
 
@@ -31,24 +29,22 @@ function App() {
   return (
     <div className="App">
       <h1>Iniciar Sesión</h1>
-      <Input
-        label="Nombre de Usuario"
+      <input
         placeholder="Ingrese su nombre de usuario"
         name="username"
         value={username}
-        onInputChange={onChangeUsername}
+        onChange={onChangeUsername}
       />
-      <Input
-        label="Contraseña"
+      <input
         placeholder="Ingrese su contraseña"
         name="password"
         value={password}
-        onInputChange={onChangePassword}
+        onChange={onChangePassword}
         type="password"
       />
-      <Button isActive={isActive} onClick={handleClick} disabled={!isActive}>
+      <button disabled={!isActive} onClick={handleClick} >
         Iniciar Sesión
-      </Button>
+      </button>
     </div>
   );
 }
